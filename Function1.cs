@@ -18,6 +18,7 @@ namespace FunctionApp41
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject<User>(requestBody);
+            UserContext userContext = new UserContext();
 
             return new OkObjectResult("Hello");
         }
