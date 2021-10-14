@@ -17,10 +17,11 @@ namespace FunctionApp41
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req)
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject<User>(requestBody);
+            User data = JsonConvert.DeserializeObject<User>(requestBody);
             UserContext userContext = new UserContext();
+            userContext.Add(data);
 
-            return new OkObjectResult("Hello");
+            return new OkObjectResult($"{data.UserName} was added");
         }
     }
 }
