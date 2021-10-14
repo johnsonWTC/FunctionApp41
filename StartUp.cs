@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-[assembly: FunctionsStartup(typeof(FunctionApp40.Startup))]
+[assembly: FunctionsStartup(typeof(FunctionApp41.Startup))]
 
 
-namespace FunctionApp40
+namespace FunctionApp41
 {
     class Startup : FunctionsStartup
     {
