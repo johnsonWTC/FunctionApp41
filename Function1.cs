@@ -20,8 +20,7 @@ namespace FunctionApp41
             User data = JsonConvert.DeserializeObject<User>(requestBody);
             UserContext userContext = new UserContext();
             userContext.Add(data);
-
-            return new OkObjectResult($"{data.UserName} was added");
+            return new OkObjectResult($"{data.UserName} was added and is usernumber {data.UserID}");
         }
     }
 }
