@@ -13,7 +13,7 @@ namespace FunctionApp41
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
-            builder.Services.AddScoped<ICrud, Crud>();
+          
         }
     }
 }
